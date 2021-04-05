@@ -1,6 +1,6 @@
 class AnalogClock{
   constructor(Now) {
-    this.hou = Now.getHours();
+    this.hou = Now.getHours() % 12;
     this.min = Now.getMinutes();
     this.sec = Now.getSeconds();
     
@@ -46,6 +46,6 @@ class AnalogClock{
       let nol = 100;
       // line(始点のx座標, 始点のy座標, 終点のx座標, 終点のy座標);
       strokeWeight(8);
-      line(200,200,this.houX-nol*sin(-(radians((360/(12))*this.hou) - radians((360/(24*99*60*60))*clock))),this.houX-nol*cos(-(radians((360/(12))*this.hou))-radians((360/(24*99*60*60))*clock)));
+      line(200,200,this.houX-nol*sin(-(radians((360/(12))*this.hou) -(radians((30/60))*this.min) - radians((360/(24*99*60*12))*clock))),this.houX-nol*cos(-(radians((360/(12))*this.hou)) -(radians((30/(60))*this.min)) -(radians((360/(24*99*60*12))*clock))));
   }
 }

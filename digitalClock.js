@@ -360,7 +360,7 @@ class DigitalClock{
         return [0,1,1,0,1,1,1];
     }
     print7seg6(){
-        return [0,0,1,1,1,1,1];
+        return [0,1,1,1,1,1,1];
     }
     print7seg7(){
         return [1,1,1,0,0,1,0];
@@ -369,7 +369,7 @@ class DigitalClock{
         return [1,1,1,1,1,1,1];
     }
     print7seg9(){
-        return [1,1,1,0,0,1,1];
+        return [1,1,1,0,1,1,1];
     }
 
 }
